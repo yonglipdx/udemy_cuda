@@ -155,27 +155,27 @@ void histogram_gpu_multistreams(int* h_input, int* h_histo_gpu, int size)
 }
 
 
-//int main(void)
-//{
-//	long byte_size = SIZE * sizeof(int);
-//	int histo_byte_size = HISTO_SIZE * sizeof(int);
-//
-//	int *h_input, *h_histo_cpu, *h_histo_gpu;
-//	
-//	h_input = (int*)malloc(byte_size);
-//	h_histo_cpu = (int*)malloc(histo_byte_size);
-//	h_histo_gpu = (int*)malloc(histo_byte_size);
-//
-//	//initialize the array from 0 to 255
-//	initialize(h_input, SIZE, INIT_0_TO_X, 256);
-//
-//	histogram_cpu(h_input, h_histo_cpu, SIZE);
-//	histogram_gpu(h_input, h_histo_gpu, SIZE);
-//
-//	compare_arrays(h_histo_gpu, h_histo_cpu, HISTO_SIZE);
-//	
-//	free(h_histo_gpu);
-//	free(h_histo_cpu);
-//	free(h_input);
-//	return 0;
-//}
+int main_7_histogram(void)
+{
+	long byte_size = SIZE * sizeof(int);
+	int histo_byte_size = HISTO_SIZE * sizeof(int);
+
+	int *h_input, *h_histo_cpu, *h_histo_gpu;
+	
+	h_input = (int*)malloc(byte_size);
+	h_histo_cpu = (int*)malloc(histo_byte_size);
+	h_histo_gpu = (int*)malloc(histo_byte_size);
+
+	//initialize the array from 0 to 255
+	initialize(h_input, SIZE, INIT_0_TO_X, 256);
+
+	histogram_cpu(h_input, h_histo_cpu, SIZE);
+	histogram_gpu(h_input, h_histo_gpu, SIZE);
+
+	compare_arrays(h_histo_gpu, h_histo_cpu, HISTO_SIZE);
+	
+	free(h_histo_gpu);
+	free(h_histo_cpu);
+	free(h_input);
+	return 0;
+}

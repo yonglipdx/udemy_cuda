@@ -20,6 +20,7 @@ __global__ void unique_gid_calculation_2d_2d(int * data)
 }
 
 
+
 //int main()
 //{
 //	int array_size = 16;

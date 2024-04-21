@@ -48,7 +48,8 @@ void query_device()
 		iProp.maxThreadsDim[0], iProp.maxThreadsDim[1], iProp.maxThreadsDim[2]);
 }
 
-int main()
+int main_1_17()
 {
 	query_device();
+	return 0;
 }
